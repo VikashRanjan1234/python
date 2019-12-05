@@ -10,3 +10,14 @@ group_age_occupation = users ['age'].groupby(users['occupation']) ## age group b
 mean1 = users.groupby('occupation').age.mean ()   ## age group by occupation 
 # count1 = users.groupby('occupation').age.values_count ()   ## age group by occupation 
 print(mean1)
+
+
+group_age_gender = users ['age'].groupby(users['gender']) ## age group by occupation 
+
+
+for gender,age in group_age_gender:
+    print(occupation) 
+    print("="*len(gender), end = "")
+    print ()
+    print (round(np.mean(age)))
+    print ()
