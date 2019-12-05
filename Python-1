@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+users = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user', 
+                    sep='|', index_col='user_id')
+
+print (users)
+#print (users)
+import numpy as np
+group_age_occupation = users ['age'].groupby(users['occupation']) ## age group by occupation 
+mean1 = users.groupby('occupation').age.mean ()   ## age group by occupation 
+# count1 = users.groupby('occupation').age.values_count ()   ## age group by occupation 
+print(mean1)
